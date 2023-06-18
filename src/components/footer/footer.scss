@@ -1,0 +1,107 @@
+.footer {
+    padding: 94px 0 64px;
+    position: relative;
+    margin: -1px;
+    width: 100vw;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: auto;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    &::after {
+        z-index: -2;
+        width: 100%;
+        background-color: var(--c-button);
+    }
+
+    &::before {
+        z-index: -1;
+        width: 93%;
+        background-color: #316099;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 900px) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 40px;
+            padding-right: 30px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .list-item__title {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                h3 {
+                    font-size: 28px;
+                    color: var(--c-white);
+                    font-weight: 600;
+                }
+            }
+
+            &:nth-child(1) {
+                .list-item__title {
+                    p {
+                        font-size: 28px;
+                        color: var(--c-white);
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &:nth-child(n+2) {
+                .list-item__title {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .list-item__el {
+                display: flex;
+                gap: 16px;
+
+                span {
+                    color: var(--c-white);
+                    font-weight: 600;
+                }
+
+                p,
+                a {
+                    color: var(--c-white);
+                    font-weight: 400;
+                    text-decoration: none;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+
+    .footer__copyright {
+        margin-top: 63px;
+
+        p {
+            color: var(--c-white);
+            opacity: 0.4;
+            font-weight: 300;
+
+            @media (max-width: 600px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

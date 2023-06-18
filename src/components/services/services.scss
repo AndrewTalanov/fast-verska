@@ -1,0 +1,131 @@
+.services {
+    padding: 180px 0 212px;
+    position: relative;
+
+    @media (max-width: 660px) {
+        padding: 80px 0 120px;
+    }
+
+    h2 {
+        color: #316099;
+        max-width: 360px;
+        position: absolute;
+
+        @media (max-width: 800px) {
+            position: unset;
+            text-align: center;
+            margin: 0 auto 30px;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+        padding-left: 80px;
+
+        @media (max-width: 950px) {
+            gap: 5%;
+            padding-left: 0;
+        }
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .card {
+            padding: 48px;
+            max-width: 380px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            animation: shadow-move 5s infinite alternate;
+
+            @media (max-width: 800px) {
+                max-width: 100%;
+            }
+
+            &:nth-child(1) {
+                grid-row: span 2;
+                align-self: center;
+            }
+
+            &__icon {
+                display: flex;
+                justify-content: center;
+
+                &_extra {
+                    position: absolute;
+                    display: grid;
+                    grid-template-areas:
+                        ". a . . b ."
+                        ". . . . . ."
+                        "c . . . . d";
+                    top: -3.5%;
+
+                    img:nth-child(1) {
+                        grid-area: c;
+                    }
+
+                    img:nth-child(2) {
+                        grid-area: a;
+                        margin: 0 55px 62px 0;
+                    }
+
+                    img:nth-child(3) {
+                        grid-area: b;
+                    }
+
+                    img:nth-child(4) {
+                        grid-area: d;
+                    }
+                }
+            }
+
+            &__title {
+                margin: 56px 0 16px;
+                font-weight: 600;
+            }
+
+            &__description {
+                line-height: 162%;
+                margin-bottom: 32px;
+            }
+
+            &__link {
+                display: inline-block;
+                color: #5A98D0;
+                text-decoration: none;
+                font-size: 14px;
+                line-height: 214%;
+                font-weight: 600;
+                transition: .4s;
+            }
+
+            &__link:hover {
+                transform: scale(1.2) translateX(10%);
+            }
+
+            &__arrow {
+                color: #5A98D0;
+                margin-left: 5px;
+            }
+
+            @keyframes shadow-move {
+                0% {
+                    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+                }
+
+                100% {
+                    box-shadow: 5px 5px 10px rgba(16, 112, 177, 0.2);
+                }
+            }
+        }
+    }
+
+}

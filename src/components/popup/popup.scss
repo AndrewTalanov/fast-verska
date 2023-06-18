@@ -1,0 +1,37 @@
+.popup-shadow {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &::before {
+        content: "";
+        background-color: rgba(0, 0, 0, .4);
+        position: fixed;
+        inset: 0;
+    }
+
+    .popup {
+        z-index: 11;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        background-color: var(--c-white);
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        p {
+            white-space: nowrap;
+            font-size: 20px;
+            @media (max-width: 410px) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+.popup-active {
+    display: flex;
+}

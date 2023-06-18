@@ -1,0 +1,24 @@
+<div class="form-shadow">
+    <form class="contact-form" onclick="event.stopPropagation()">
+        <h2 class="contact-form__title">SEND US MESSAGE <span class="close-button">×</span></h2>
+        <div class="contact-form__fields">
+            <div class="contact-form__field">
+                <label for="name" class="contact-form__label">Full Name</label>
+                <input type="text" name="name" id="name" class="contact-form__input" placeholder="Your Name">
+            </div>
+            <div class="contact-form__field">
+                <label for="email" class="contact-form__label">Email</label>
+                <input type="email" name="email" id="email" class="contact-form__input" placeholder="Your Email">
+            </div>
+            <div class="contact-form__field">
+                <label for="message" class="contact-form__label">Message</label>
+                <textarea id="message" name="message" class="contact-form__textarea" placeholder="Your Message"></textarea>
+            </div>
+        </div>
+        <div id="loader">
+            <p>Загрузка...</p>
+        </div>
+        <p id="request"></p>
+        <button type="submit" class="contact-form__submit button">SUBMIT</button>
+    </form>
+</div>

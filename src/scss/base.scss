@@ -1,0 +1,97 @@
+:root {
+    --c-white: white;
+    --c-f--blue-dark: #1F3F68;
+    --c-button: #5A98D0;
+    --c-curtain-first-screen: #98C3E8;
+    --f-default: 'Gilroy';
+    --f-h1: 'Galien';
+    --f-size-description: 16px;
+    --f-height-description: 160%;
+    --scrollbar-thumb: #98C3E8;
+    --c-b--burger: #356EAD;
+    --c-f--burger: #316099;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--c-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+body {
+    background-color: var(--c-white);
+}
+
+a,
+p,
+h2,
+h3,
+span,
+label,
+input,
+button,
+address
+{
+    font-family: var(--f-default);
+    color: var(--c-f--blue-dark);
+    letter-spacing: 0.05em;
+}
+address {
+    font-style: normal;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    @media (max-width: 1000px) {
+        width: 90%;
+    }
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
+}
+.section-description {
+    font-size: var(--f-size-description);
+    line-height: var(--f-height-description);
+    font-weight: 400;
+}
+
+.button {
+    background-color: var(--c-button);
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: .4s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 5px 10px 50px rgba(53, 110, 173, 0.7);
+    }
+}
