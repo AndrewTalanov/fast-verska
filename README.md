@@ -1,5 +1,5 @@
 # testovoe
 
-npm run start - dev версия
-npm run build - билд
+npm run start - dev версия.
+npm run build - билд.
 
